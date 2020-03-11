@@ -1,0 +1,3 @@
+[Compile]
+gcc -g -std=c99 -o makedata.out makedata.c lib/*.c
+
