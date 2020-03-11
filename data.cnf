@@ -1,7 +1,0 @@
-IN_CLIENT_NO:id|0
-IN_CLIENT_NO:id|24,inclientno2
-CLIENT_NO1:file|assetacc,1,5
-SELLER_CODE:array|3,020,022,024
-CLIENT_NO2:file|assetacc,2,10
-SELLER_CODE:array|5,a,b,NVL,d,e
-

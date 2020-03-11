@@ -12,6 +12,7 @@ mthd_t getmthd(char *);
 char *id(int, int);
 char *file(int, int);
 char *array(int, int);
+void freefldparams(char **, char *);
 
 const static struct name_mthd {
     const char *name;

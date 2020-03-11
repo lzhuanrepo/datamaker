@@ -1,0 +1,10 @@
+SequenceNO:id|NVL,0,0,0
+AppSheetSerialNo:id|20191210,20,0,0
+SerialNo:id|NVL,10,24, 
+SerialNo:id|head,10,-24, 
+BusinessCode:file|assetacc,0,0,1,1,5,r
+TAAccountID:file|assetacc,-20,0,4,2,7
+AccountID:file|assetacc,-20, ,4,2,7
+ShareClass:array|10,0,5,1,2,3,4,5,r
+Extend:array|0,0,3,a,b,c,r
+
