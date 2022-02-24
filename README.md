@@ -97,5 +97,4 @@ $ ./makedata.out -reccnt=100 -cfgpath=./data.cnf -outname=tsa-fund-buy-check-201
 1,报错"Segmentation fault (core dumped)",首先检查config.ini文件,是否相关长度配置不足,其次检查data.cnf,是否按要求配置相关参数、参数值是否合法,设置的起始值或数量是否越界
 
 [License]
-Copyright@2019 天阳宏业科技股份有限公司
-
+Copyright@2019
