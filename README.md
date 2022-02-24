@@ -46,60 +46,65 @@
 >共7个参数，含义分别为：从文件assetacc取值、字段总长度(包含补足部分，正数在值前补足，负数在值后补足)、占位符(补足时使用0或空格等)、从第N1行开始取、取第N2列(以","分隔判断列)、循环取前N3行。"r"代表随机，为可选项，且必须放置在末尾
 
 ## Example
-data.cnf文件内容：
+data.cnf文件内容：<br />
 `field1:id|NVL,0,0,0`<br />
->代表自增型自然数:1,2,3,....<br />
-`field2:id|head,6,-10,`<br />
->代表字段固定值部分为head,字段值长度为6,字段总长度为10,字段值长度不足在字段值的后面使用空格补足.<br />
-`field3:array|-10, ,5,z1,z2,NVL,z4,z5`<br />
->代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,顺序取值5个:z1-z5,其中NVL代表取值为空.<br />
-`field4:array|-10, ,5,z1,z2,z3,z4,z5,r`<br />
->代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,随机取值5个:z1-z5.<br />
-`field5:file|assetacc,-20, ,2,3,5`<br />
-> 代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),循环顺序取前5行.<br />
-`field6:file|assetacc,-20, ,2,3,5,r`<br />
->代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),随机取前5行.<br />
+>代表自增型自然数:1,2,3,....
 
-assetacc文件内容:
+`field2:id|head,6,-10,`<br />
+>代表字段固定值部分为head,字段值长度为6,字段总长度为10,字段值长度不足在字段值的后面使用空格补足.
+>
+`field3:array|-10, ,5,z1,z2,NVL,z4,z5`<br />
+>代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,顺序取值5个:z1-z5,其中NVL代表取值为空.
+>
+`field4:array|-10, ,5,z1,z2,z3,z4,z5,r`<br />
+>代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,随机取值5个:z1-z5.
+>
+`field5:file|assetacc,-20, ,2,3,5`<br />
+> 代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),循环顺序取前5行.
+> 
+`field6:file|assetacc,-20, ,2,3,5,r`<br />
+>代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),随机取前5行.
+
+assetacc文件内容:<br />
 `field1_line01,field2_line01,field3_line01`<br />
 `field1_line02,field2_line02,field3_line02`<br />
 `field1_line03,field2_line03,field3_line03`<br />
 `field1_line04,field2_line04,field3_line04`<br />
 `field1_line05,field2_line05,field3_line05`<br />
 `field1_line06,field2_line06,field3_line06`<br />
-`field1_line07,field2_line07,field3_line07`
-`field1_line08,field2_line08,field3_line08`
-`field1_line09,field2_line09,field3_line09`
+`field1_line07,field2_line07,field3_line07`<br />
+`field1_line08,field2_line08,field3_line08`<br />
+`field1_line09,field2_line09,field3_line09`<br />
 `field1_line10,field2_line10,field3_line10`
 
-生成数据文件内容(前7行):
-`1,head01    ,z1        ,z4        ,field3_line02        ,field3_line03`
-`2,head02    ,z2        ,z5        ,field3_line03        ,field3_line04`
-`3,head03    ,          ,z2        ,field3_line04        ,field3_line02`
-`4,head04    ,z4        ,z4        ,field3_line05        ,field3_line05`
-`5,head05    ,z5        ,z1        ,field3_line06        ,field3_line06`
-`6,head06    ,z1        ,z5        ,field3_line02        ,field3_line04`
-`7,head07    ,z2        ,z3        ,field3_line03        ,field3_line03`
+生成数据文件内容(前7行):<br />
+`1,head01    ,z1        ,z4        ,field3_line02        ,field3_line03`<br />
+`2,head02    ,z2        ,z5        ,field3_line03        ,field3_line04`<br />
+`3,head03    ,          ,z2        ,field3_line04        ,field3_line02`<br />
+`4,head04    ,z4        ,z4        ,field3_line05        ,field3_line05`<br />
+`5,head05    ,z5        ,z1        ,field3_line06        ,field3_line06`<br />
+`6,head06    ,z1        ,z5        ,field3_line02        ,field3_line04`<br />
+`7,head07    ,z2        ,z3        ,field3_line03        ,field3_line03`<br />
 ## 编译(非Oracle环境):
-`$ cd bin`
-`$ chmod +x ../src/compile.sh`
-`$ sed -i -rz 's/[^\n]*(type=[^\n]*)/type=non-oracle/' ../src/compile.sh`
-`$ ../src/compile.sh`
+`$ cd bin`<br />
+`$ chmod +x ../src/compile.sh`<br />
+`$ sed -i -rz 's/[^\n]*(type=[^\n]*)/type=non-oracle/' ../src/compile.sh`<br />
+`$ ../src/compile.sh`<br />
 ## 编译(Oracle环境):
-`$ cd bin`
-`$ chmod +x ../src/compile.sh`
-`$ sed -i -rz 's/[^\n]*(type=[^\n]*)/type=oracle/' ../src/compile.sh`
-`$ ../src/compile.sh`
+`$ cd bin`<br />
+`$ chmod +x ../src/compile.sh`<br />
+`$ sed -i -rz 's/[^\n]*(type=[^\n]*)/type=oracle/' ../src/compile.sh`<br />
+`$ ../src/compile.sh`<br />
 ## 执行(非Oracle环境):
-`$ cd bin`
-`$ ./makedata.out`
+`$ cd bin`<br />
+`$ ./makedata.out`<br />
 >or
 
-`$ ./makedata.out -reccnt=100 -cfgpath=./data.cnf -outname=tsa-fund-buy-check-20190718`
+`$ ./makedata.out -reccnt=100 -cfgpath=./data.cnf -outname=tsa-fund-buy-check-20190718`<br />
 ## 执行(Oracle环境):
-`$ export LD_LIBRARY_PATH=$ORACLE_HOME/lib`
-`$ cd bin`
-`$ ./makedata.out`
+`$ export LD_LIBRARY_PATH=$ORACLE_HOME/lib`<br />
+`$ cd bin`<br />
+`$ ./makedata.out`<br />
 >or
 >
 `$ ./makedata.out -reccnt=100 -cfgpath=./data.cnf -outname=tsa-fund-buy-check-20190718`
