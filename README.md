@@ -13,14 +13,20 @@
 
 ## Install
 >非Oracle环境，可以不执行以下命令
-Red Hat Enterprise Linux Server release 7.4 (Maipo)测试通过
+>Red Hat Enterprise Linux Server release 7.4 (Maipo)测试通过
 
 `$ su - root`
+
 `$ yum -y install automake libtool`
+
 `$ cd soft`
+
 `$ tar -zxvf ocilib-4.6.2.tar.gz`
+
 `$ cd ocilib-4.6.2`
+
 `$ chmod +x configure`
+
 >根据实际环境修改路径参数
 
 `$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`
