@@ -16,29 +16,23 @@
 >Red Hat Enterprise Linux Server release 7.4 (Maipo)测试通过
 
 `$ su - root`<br />
-`$ yum -y install automake libtool`
-
-`$ cd soft`
-
-`$ tar -zxvf ocilib-4.6.2.tar.gz`
-
-`$ cd ocilib-4.6.2`
-
-`$ chmod +x configure`
-
->根据实际环境修改路径参数
-
-`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`
-`$ autoreconf -ivf`
-`$ make`
-`$ make install`
-`$ echo /usr/local/lib >> /etc/ld.so.conf`
-`$ ldconfig`
+`$ yum -y install automake libtool`<br />
+`$ cd soft`<br />
+`$ tar -zxvf ocilib-4.6.2.tar.gz`<br />
+`$ cd ocilib-4.6.2`<br />
+`$ chmod +x configure`<br />
+>根据实际环境修改路径参数<br />
+`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`<br />
+`$ autoreconf -ivf`<br />
+`$ make`<br />
+`$ make install`<br />
+`$ echo /usr/local/lib >> /etc/ld.so.conf`<br />
+`$ ldconfig`<br />
 
 ## Usage
 >所有配置文件均以空行结尾
-config.ini说明详见bin目录下config.ini
-以下为data.cnf说明
+>config.ini说明详见bin目录下config.ini
+>以下为data.cnf说明
 
 * 字段名称以英文字母开头
 * 字段类型: id | array | file
@@ -52,24 +46,18 @@ config.ini说明详见bin目录下config.ini
 
 ## Example
 data.cnf文件内容：
-
-`field1:id|NVL,0,0,0`                                      
->代表自增型自然数:1,2,3,....
-
-`field2:id|head,6,-10,`                                  
->代表字段固定值部分为head,字段值长度为6,字段总长度为10,字段值长度不足在字段值的后面使用空格补足.
-
-`field3:array|-10, ,5,z1,z2,NVL,z4,z5`    
->代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,顺序取值5个:z1-z5,其中NVL代表取值为空.
-
-`field4:array|-10, ,5,z1,z2,z3,z4,z5,r`  
->代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,随机取值5个:z1-z5.
-
-`field5:file|assetacc,-20, ,2,3,5`           
-> 代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),循环顺序取前5行.
->
-`field6:file|assetacc,-20, ,2,3,5,r`       
->代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),随机取前5行.
+`field1:id|NVL,0,0,0`<br />
+>代表自增型自然数:1,2,3,....<br />
+`field2:id|head,6,-10,`<br />
+>代表字段固定值部分为head,字段值长度为6,字段总长度为10,字段值长度不足在字段值的后面使用空格补足.<br />
+`field3:array|-10, ,5,z1,z2,NVL,z4,z5`<br />
+>代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,顺序取值5个:z1-z5,其中NVL代表取值为空.<br />
+`field4:array|-10, ,5,z1,z2,z3,z4,z5,r`<br />
+>代表字段总长度为10,字段值长度不足在字段值的后面使用空格补足,随机取值5个:z1-z5.<br />
+`field5:file|assetacc,-20, ,2,3,5`<br />
+> 代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),循环顺序取前5行.<br />
+`field6:file|assetacc,-20, ,2,3,5,r`<br />
+>代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),随机取前5行.<br />
 
 assetacc文件内容:
 `field1_line01,field2_line01,field3_line01`
