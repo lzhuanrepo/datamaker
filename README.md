@@ -12,7 +12,7 @@
 * README.md ：说明文档。
 
 ## Install
->非Oracle环境，可以不执行以下命令
+>非Oracle环境，可以不执行以下命令<br />
 >Red Hat Enterprise Linux Server release 7.4 (Maipo)测试通过
 
 `$ su - root`<br />
