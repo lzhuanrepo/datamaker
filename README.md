@@ -17,6 +17,7 @@
 $ su - root
 $ yum -y install automake libtool
 $ cd soft
+---
 $ tar -zxvf ocilib-4.6.2.tar.gz
 $ cd ocilib-4.6.2
 $ chmod +x configure
