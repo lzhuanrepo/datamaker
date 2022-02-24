@@ -23,7 +23,7 @@
 `$ chmod +x configure`<br />
 >根据实际环境修改路径参数
 
-`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`<br />
+`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=**/oracle/product/12.2.0/db/rdbms/public**`<br />
 `$ autoreconf -ivf`<br />
 `$ make`<br />
 `$ make install`<br />
@@ -43,7 +43,7 @@
 * array类型: array|-10, ,5,z1,z2,NVL,z4,z5/array|-10, ,5,z1,z2,z3,z4,z5,r
 >共5个参数，含义分别为：字段总长度(包含补足部分，正数在值前补足，负数在值后补足)、占位符(补足时使用0或空格等)、可取值的个数(n)、可取值的内容(Z1-Zn、整体视为一个参数)。"r"代表随机，为可选项，且必须放置在末尾
 * file类型: file|assetacc,-20, ,2,3,5/file|assetacc,-20, ,2,3,5,r
->共7个参数，含义分别为：从文件assetacc取值、字段总长度(包含补足部分，正数在值前补足，负数在值后补足)、占位符(补足时使用0或空格等)、从第N1行开始取、取第N2列(以","分隔判断列)、循环取前N3行。"r"代表随机，为可选项，且必须放置在末尾
+>共7个参数，含义分别为：从文件assetacc取值、字段总长度(包含补足部分，正数在值前补足，负数在值后补足)、占位符(补足时使用0或空格等)、从第N1行开始取、取第N2列(以","分隔)、循环取前N3行。"r"代表随机，为可选项，且必须放置在末尾
 
 ## Example
 data.cnf文件内容：
