@@ -15,8 +15,7 @@
 >非Oracle环境，可以不执行以下命令
 >Red Hat Enterprise Linux Server release 7.4 (Maipo)测试通过
 
-`$ su - root`
-
+`$ su - root`<br />
 `$ yum -y install automake libtool`
 
 `$ cd soft`
