@@ -3,7 +3,7 @@
 2,功能:可批量生成自然数、定长字段、前补、后补、起始字符串等等
 3,可配合shell脚本实现多并发,尤其适合高性能大数据量要求的场景
 4,支持命令行参数(config.ini中所有参数均可转化),使用灵活
-
+---
 [Structure]
 1,bin目录:编译后二进制可执行文件makedata.out,及配置文件config.ini与data.cnf,config.ini为全局配置文件,data.cnf为字段配置文件
 2,src目录:C源代码
