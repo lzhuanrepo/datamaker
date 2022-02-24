@@ -21,7 +21,8 @@
 `$ tar -zxvf ocilib-4.6.2.tar.gz`<br />
 `$ cd ocilib-4.6.2`<br />
 `$ chmod +x configure`<br />
->根据实际环境修改路径参数<br />
+>根据实际环境修改路径参数
+
 `$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`<br />
 `$ autoreconf -ivf`<br />
 `$ make`<br />
@@ -60,12 +61,12 @@ data.cnf文件内容：
 >代表字段从文件assetacc中取值,字段总长度为20,字段值长度不足在字段值的后面使用空格补足,从第2行开始取,取第3列(以","分隔判断列),随机取前5行.<br />
 
 assetacc文件内容:
-`field1_line01,field2_line01,field3_line01`
-`field1_line02,field2_line02,field3_line02`
-`field1_line03,field2_line03,field3_line03`
-`field1_line04,field2_line04,field3_line04`
-`field1_line05,field2_line05,field3_line05`
-`field1_line06,field2_line06,field3_line06`
+`field1_line01,field2_line01,field3_line01`<br />
+`field1_line02,field2_line02,field3_line02`<br />
+`field1_line03,field2_line03,field3_line03`<br />
+`field1_line04,field2_line04,field3_line04`<br />
+`field1_line05,field2_line05,field3_line05`<br />
+`field1_line06,field2_line06,field3_line06`<br />
 `field1_line07,field2_line07,field3_line07`
 `field1_line08,field2_line08,field3_line08`
 `field1_line09,field2_line09,field3_line09`
