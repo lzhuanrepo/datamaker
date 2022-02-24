@@ -23,7 +23,7 @@
 `$ chmod +x configure`<br />
 >根据实际环境修改路径参数
 
-`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=**/oracle/product/12.2.0/db/rdbms/public**`<br />
+`$ ./configure --with-oracle-lib-path=/oracle/product/12.2.0/db/lib --with-oracle-headers-path=/oracle/product/12.2.0/db/rdbms/public`<br />
 `$ autoreconf -ivf`<br />
 `$ make`<br />
 `$ make install`<br />
