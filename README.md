@@ -1,5 +1,5 @@
 ## Introduction
-* 本软件由C语言开发，适用于具有二维关系模式的数据构造。
+* This software is developed by C language and is suitable for data structure with two-dimensional relational schema.
 * 功能：可批量生成自然数、定长字段、前补、后补、起始字符串等等。
 * 可配合shell脚本实现多并发，尤其适合高性能大数据量要求的场景。
 * 支持命令行参数（config.ini中所有参数均可转化为命令行参数），使用灵活。
